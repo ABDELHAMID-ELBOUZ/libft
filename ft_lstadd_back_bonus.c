@@ -28,13 +28,3 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		temp = temp->next;
 	temp->next = new;
 }
-#include <stdio.h>
-int main()
-{
-	t_list *head = NULL;
-	t_list *node = ft_lstnew("1337");
-	ft_lstadd_back(&head,node);
-	t_list *current = head;
-	printf("%s\n",(char *)current->content);
-	printf("%p\n",head->next);
-}
