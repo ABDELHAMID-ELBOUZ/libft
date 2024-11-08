@@ -27,15 +27,3 @@ void	print_content(void *content)
 {
 	printf("%s\n",(char *)content);
 }
-int main()
-{
-	t_list *node1 = ft_lstnew("element 1");
-	t_list *node2 = ft_lstnew("element 2");
-	t_list *node3 = ft_lstnew("element 3");
-	t_list *node4 = ft_lstnew("element 4");
-	node1->next = node2;
-	node2->next = node3;
-	node3->next = node4;
-	node4->next = NULL;
-	ft_lstiter(node1,print_content);
-}
