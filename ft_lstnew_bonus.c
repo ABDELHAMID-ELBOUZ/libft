@@ -23,11 +23,3 @@ t_list	*ft_lstnew(void *content)
 	new_node->next = NULL;
 	return (new_node);
 }
-#include <stdio.h>
-int main()
-{
-	int n = 42;
-	t_list *node = ft_lstnew("1337");
-	printf("%s\n",(char *)node->content);
-	printf("%p\n",node->next);
-}
