@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aelbouz <aelbouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 08:46:35 by aelbouz           #+#    #+#             */
-/*   Updated: 2024/11/08 08:29:30 by aelbouz          ###   ########.fr       */
+/*   Updated: 2024/11/08 11:51:03 by aelbouz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,4 @@ t_list	*ft_lstnew(void *content)
 	new_node->content = content;
 	new_node->next = NULL;
 	return (new_node);
-}
-#include <stdio.h>
-int main()
-{
-	int n = 42;
-	t_list *node = ft_lstnew("1337");
-	printf("%s\n",(char *)node->content);
-	printf("%p\n",node->next);
 }

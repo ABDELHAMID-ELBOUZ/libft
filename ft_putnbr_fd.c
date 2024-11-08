@@ -6,7 +6,7 @@
 /*   By: aelbouz <aelbouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 11:04:55 by aelbouz           #+#    #+#             */
-/*   Updated: 2024/11/07 13:47:16 by aelbouz          ###   ########.fr       */
+/*   Updated: 2024/11/08 17:15:09 by aelbouz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_putnbr_fd(int n, int fd)
 {
 	char		r;
-	long long	nb;
+	long	nb;
 
 	nb = n;
 	if (nb < 0)

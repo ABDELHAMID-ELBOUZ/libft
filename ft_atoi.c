@@ -6,7 +6,7 @@
 /*   By: aelbouz <aelbouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 11:34:27 by aelbouz           #+#    #+#             */
-/*   Updated: 2024/11/07 08:44:48 by aelbouz          ###   ########.fr       */
+/*   Updated: 2024/11/08 17:11:06 by aelbouz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,4 +55,10 @@ int	ft_atoi(const char *str)
 		str++;
 	}
 	return ((int)result * sign);
+}
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+	printf("%d\n",ft_atoi("-21474834888888888888"));	
 }
