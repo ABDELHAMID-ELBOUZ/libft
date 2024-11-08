@@ -6,7 +6,7 @@
 #    By: aelbouz <aelbouz@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/02 11:19:35 by aelbouz           #+#    #+#              #
-#    Updated: 2024/11/06 11:20:21 by aelbouz          ###   ########.fr        #
+#    Updated: 2024/11/08 09:54:32 by aelbouz          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,8 +25,8 @@ ft_memmove.c ft_putnbr_fd.c ft_strjoin.c ft_strncmp.c ft_substr.c ft_bzero.c ft_
 ft_strlcat.c ft_strnstr.c ft_tolower.c ft_calloc.c ft_isdigit.c ft_memcmp.c ft_putchar_fd.c ft_strchr.c ft_strlcpy.c ft_strrchr.c \
 ft_toupper.c ft_striteri.c ft_strmapi.c ft_split.c \
 
-BONUS_SRCS = ft_lstadd_back.c ft_lstclear.c ft_lstiter.c ft_lstnew.c \
-ft_lstadd_front.c ft_lstdelone.c ft_lstlast.c ft_lstsize.c \
+BONUS_SRCS = ft_lstadd_back_bonus.c ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstnew_bonus.c \
+ft_lstadd_front_bonus.c ft_lstdelone_bonus.c ft_lstlast_bonus.c ft_lstsize_bonus.c \
 
 OBJS = $(SRCS:.c=.o)
 
@@ -49,5 +49,3 @@ fclean : clean
 	$(RM) $(NAME)
 
 re : fclean all
-
-.PHONY : all clean fclean re bonus

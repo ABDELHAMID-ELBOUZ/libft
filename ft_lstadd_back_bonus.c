@@ -1,37 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aelbouz <aelbouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 11:35:28 by aelbouz           #+#    #+#             */
-/*   Updated: 2024/11/08 08:40:09 by aelbouz          ###   ########.fr       */
+/*   Created: 2024/11/06 09:46:15 by aelbouz           #+#    #+#             */
+/*   Updated: 2024/11/07 16:11:34 by aelbouz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t n)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	unsigned char		*d;
-	const unsigned char	*s;
+	t_list	*temp;
 
-	d = (unsigned char *)dst;
-	s = (const unsigned char *)src;
-	if (!dst && !src)
-		return (NULL);
-	if (dst == src)
-		return (dst);
-	if (d > s)
+	if (!lst || !new)
+		return ;
+	if (*lst == NULL)
 	{
-		while (n--)
-			d[n] = s[n];
+		*lst = new;
+		return ;
 	}
-	else
-	{
-		while (n--)
-			*d++ = *s++;
-	}
-	return (dst);
+	temp = *lst;
+	while (temp->next)
+		temp = temp->next;
+	temp->next = new;
+}
+#include <stdio.h>
+int main()
+{
+	t_list *head = NULL;
+	t_list *node = ft_lstnew("1337");
+	ft_lstadd_back(&head,node);
+	t_list *current = head;
+	printf("%s\n",(char *)current->content);
+	printf("%p\n",head->next);
 }

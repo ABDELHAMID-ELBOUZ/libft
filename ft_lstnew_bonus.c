@@ -1,37 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aelbouz <aelbouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 11:35:28 by aelbouz           #+#    #+#             */
-/*   Updated: 2024/11/08 08:40:09 by aelbouz          ###   ########.fr       */
+/*   Created: 2024/11/06 08:46:35 by aelbouz           #+#    #+#             */
+/*   Updated: 2024/11/08 08:29:30 by aelbouz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t n)
+t_list	*ft_lstnew(void *content)
 {
-	unsigned char		*d;
-	const unsigned char	*s;
+	t_list	*new_node;
 
-	d = (unsigned char *)dst;
-	s = (const unsigned char *)src;
-	if (!dst && !src)
+	new_node = (t_list *)malloc(sizeof(t_list));
+	if (!new_node)
 		return (NULL);
-	if (dst == src)
-		return (dst);
-	if (d > s)
-	{
-		while (n--)
-			d[n] = s[n];
-	}
-	else
-	{
-		while (n--)
-			*d++ = *s++;
-	}
-	return (dst);
+	new_node->content = content;
+	new_node->next = NULL;
+	return (new_node);
+}
+#include <stdio.h>
+int main()
+{
+	int n = 42;
+	t_list *node = ft_lstnew("1337");
+	printf("%s\n",(char *)node->content);
+	printf("%p\n",node->next);
 }

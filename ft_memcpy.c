@@ -6,7 +6,7 @@
 /*   By: aelbouz <aelbouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 10:40:17 by aelbouz           #+#    #+#             */
-/*   Updated: 2024/11/06 10:27:53 by aelbouz          ###   ########.fr       */
+/*   Updated: 2024/11/08 09:45:41 by aelbouz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	if (!dst && !src)
 		return (NULL);
 	if (dst == src)
-		return (src);
+		return (dst);
 	d = (unsigned char *)dst;
 	s = (const unsigned char *)src;
 	while (n--)

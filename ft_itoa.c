@@ -6,7 +6,7 @@
 /*   By: aelbouz <aelbouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 16:12:46 by aelbouz           #+#    #+#             */
-/*   Updated: 2024/11/05 10:22:30 by aelbouz          ###   ########.fr       */
+/*   Updated: 2024/11/07 16:06:51 by aelbouz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ char	*ft_itoa(int n)
 
 	i = count_digit(n);
 	nb = n;
-	(str = (char *)malloc(sizeof(char) * (i + 1)));
+	str = (char *)malloc(sizeof(char) * (i + 1));
 	if (!str)
 		return (NULL);
 	str[i] = '\0';
