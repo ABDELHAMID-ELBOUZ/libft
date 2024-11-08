@@ -22,8 +22,3 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 		lst = lst->next;
 	}
 }
-#include <stdio.h>
-void	print_content(void *content)
-{
-	printf("%s\n",(char *)content);
-}
