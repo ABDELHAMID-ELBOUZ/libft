@@ -42,11 +42,7 @@ int	ft_atoi(const char *str)
 	str = skip_whitespace(str, &sign);
 	result = 0;
 	while (*str >= '0' && *str <= '9')
-<<<<<<< HEAD
-	{
-=======
 	{		
->>>>>>> 3758e9e3bbb2a08fdd38ee5f5b7a626af320fdfb
 		check = result;
 		result = result * 10 + (*str - '0');
 		if (result / 10 != check)
