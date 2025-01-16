@@ -36,17 +36,11 @@ all : $(NAME)
 
 $(NAME) : $(OBJS)
 	$(AR) $(NAME) $(OBJS)
-<<<<<<< HEAD
 	
 bonus :  $(BONUS_OBJS)
 	$(AR) $(NAME) $(BONUS_OBJS)
-	
-=======
 
-bonus : $(BONUS_OBJS)
-	$(AR) $(NAME) $(BONUS_OBJS)
 
->>>>>>> 3758e9e3bbb2a08fdd38ee5f5b7a626af320fdfb
 %.o: %.c libft.h
 	$(CC) $(FLAGS) -c $< -o $@
 
