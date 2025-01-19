@@ -12,11 +12,7 @@
 
 #include "libft.h"
 
-<<<<<<< HEAD
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
-=======
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
->>>>>>> 3758e9e3bbb2a08fdd38ee5f5b7a626af320fdfb
 {
 	unsigned int	i;
 
