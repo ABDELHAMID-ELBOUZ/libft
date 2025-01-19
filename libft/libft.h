@@ -66,8 +66,4 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 
-<<<<<<< HEAD
 #endif
-=======
-#endif
->>>>>>> 3758e9e3bbb2a08fdd38ee5f5b7a626af320fdfb
